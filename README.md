@@ -1,4 +1,4 @@
-# LangChain LLM Tutorial
+# LangChain LLM Tutorial bit by bit...
 
 Welcome to the LangChain LLM tutorial! This guide is designed to help you learn LangChain step by step, at a slow and deliberate pace. Rushing often leads to mistakes, and we want to ensure you have a solid understanding at every stage.
 
