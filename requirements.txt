@@ -1,0 +1,13 @@
+asyncio
+fastapi
+groq
+gunicorn
+haystack-ai
+ollama-haystack
+langchain
+langchain-groq
+langchain-ollama 
+langchain-openai
+langchain-community 
+langchain-qdrant
+pypdf
