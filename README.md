@@ -2,7 +2,7 @@
 
 Welcome to the LangChain LLM tutorial! This guide is designed to help you learn LangChain step by step, at a slow and deliberate pace. Rushing often leads to mistakes, and we want to ensure you have a solid understanding at every stage.
 
-## About This Tutorial
+# About This Tutorial
 LangChain is a powerful framework for building applications using large language models (LLMs). However, due to its complexity, it’s easy to become overwhelmed if you try to move too quickly. This tutorial is intentionally structured to:
 
 - Emphasize gradual learning.
@@ -13,79 +13,36 @@ By the end of this tutorial, you’ll have the confidence and knowledge to creat
 
 ---
 
-## Structure of the Tutorial
+# Structure of the Tutorial
 
-1. **Introduction to LLMs**
-   - Understand the basics of large language models.
-   - Learn how LangChain leverages LLMs for application development.
+## 1. Talk to the LLM
+Ask simple questions to a LLM
 
-2. **Building Blocks of LangChain**
-   - Learn about key concepts such as chains, prompts, and agents.
+## 2. Vectors and embedding
+How to use Embedding we can use for RAG's
 
-3. **Implementing Your First LangChain Application**
-   - Step-by-step guidance to set up your environment and run your first LangChain program.
+## 3. Classification
+Classify a message using pydantic object and ChatPromptTemplate
 
-4. **Advanced Topics**
-   - Dive into embeddings, vector stores, and classification.
-   - Experiment with extraction and more complex workflows.
-
-5. **Deployment and Scaling**
-   - Learn how to deploy your LangChain applications using Docker and Docker Compose.
+## 4. Extraction
+Same but for structured data extraction
 
 ---
 
-## Prerequisites
-To follow this tutorial, ensure you have the following installed:
+# Install
 
-- Python 3.8 or later
-- Docker and Docker Compose
-- A GPU-enabled machine for optimal performance
+- We'll use Ollama to avoid expenses associated with LLM like GPT. No need API keys. The version of LangChain installed should be 0.3+
+- Ollama [is easy to install using Docker](https://github.com/ollama/ollama/blob/main/docs/docker.md). 
+(Better to have a GPU, even a small one)
+- I give an example of Dockerfile and docker-compose.yaml using Python 3.12
+- You can then use an evironment variable OLLAMA_SERVER (ex. OLLAMA_SERVER='http://ollama:11434') from this container [running Jupyter](https://jupyterlab.readthedocs.io/en/4.1.x/getting_started/installation.html)
+- Required Python packages from `requirements.txt` file should be build with the Dockerfile.
 
-Additionally, install the required Python packages:
+A simple `docker-compose up -d` should do the trick
 
-```
-asyncio
-fastapi
-groq
-gunicorn
-haystack-ai
-ollama-haystack
-langchain
-langchain-groq
-langchain-ollama
-langchain-openai
-langchain-community
-langchain-qdrant
-pypdf
-```
+# Run the Notebooks
+This tutorial includes a series of Jupyter Notebooks you can run [directly from your container through VSCode](https://code.visualstudio.com/docs/devcontainers/containers)
 
-These dependencies are also listed in the `requirements.txt` file.
-
----
-
-## Getting Started
-
-### Step 1: Set Up the Environment
-1. Clone this repository.
-2. Build the Docker containers using the provided `docker-compose.yaml` file:
-
-   ```bash
-   docker-compose up -d
-   ```
-
-3. Confirm that the services are running:
-   - LangChain: Accessible on port 8888
-   - Qdrant: Accessible on port 6333
-
-### Step 2: Run the Notebooks
-This tutorial includes a series of Jupyter Notebooks to guide you through the concepts:
-
-- `01.llm_template.ipynb`: Start with LangChain templates.
-- `02.embeddings_vectors.ipynb`: Explore embeddings and vectorization.
-- `03.classify.ipynb`: Learn how to classify text.
-- `04.extraction.ipynb`: Understand data extraction techniques.
-
-Run these notebooks in sequence to follow the structured learning path.
 
 ---
 
