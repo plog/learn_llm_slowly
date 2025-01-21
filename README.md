@@ -15,23 +15,32 @@ By the end of this tutorial, you’ll have the confidence and knowledge to creat
 
 # Structure of the Tutorial
 
-## 1. Talk to the LLM
-Ask simple questions to a LLM
+1. Talk to the LLM<br>
+[01.llm_template.ipynb](01.llm_template.ipynb): Ask simple questions to a LLM
 
-## 2. Vectors and embedding
-How to use Embedding we can use for RAG's
+2. Vectors and embedding<br>
+[02.embeddings_vectors.ipynb](02.embeddings_vectors.ipynb): How to use Embedding we can use for RAG's
 
-## 3. Classification
-Classify a message using pydantic object and ChatPromptTemplate
+3. Classification<br>
+[03.classify.ipynb](03.classify.ipynb): Classify a message using pydantic object and ChatPromptTemplate
 
-## 4. Extraction
-Same but for structured data extraction
+4. Extraction<br>
+[04.extraction.ipynb](04.extraction.ipynb): Same but for structured data extraction
 
 ---
 
-# Install
+# Install 
 
-- We'll use Ollama to avoid expenses associated with LLM like GPT. No need API keys. The version of LangChain installed should be 0.3+
+To be independant and be able to practice anywhere, I'm using two Docker containers:
+1) One for [**Ollama**](https://ollama.com/search)with a couple of models
+2) **A development container** with Python 3.12 and the libraries I need
+4) Using VSCode you [**"Attach Visual Studio Code"**](https://code.visualstudio.com/docs/devcontainers/containers) with Jupyter plugins 
+
+... and you're the king of the world
+
+- We'll use Ollama to avoid expenses associated with LLM like GPT. No need API keys nor Credit Card. 
+- Results may be a bit less accurate than GPT but we wanna learn first.
+- The version of LangChain installed should be 0.3+ (important)
 - Ollama [is easy to install using Docker](https://github.com/ollama/ollama/blob/main/docs/docker.md). 
 (Better to have a GPU, even a small one)
 - I give an example of Dockerfile and docker-compose.yaml using Python 3.12
@@ -41,7 +50,7 @@ Same but for structured data extraction
 A simple `docker-compose up -d` should do the trick
 
 # Run the Notebooks
-This tutorial includes a series of Jupyter Notebooks you can run [directly from your container through VSCode](https://code.visualstudio.com/docs/devcontainers/containers)
+This tutorial includes a series of Jupyter Notebooks you can run 
 
 
 ---
