@@ -1,0 +1,59 @@
+networks:
+  default:
+    external: true
+    name: scoobydoo
+    enable_ipv6: false
+
+services:
+  ollama:
+    container_name: ollama
+    image: ollama/ollama:latest
+    volumes:
+      - ./cat/ollama:/root/.ollama
+    environment:
+      - gpus=all
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    restart: always
+    container_name: qdrant
+    ports:
+      - 6333:6333
+    configs:
+      - source: qdrant_config
+        target: /qdrant/config/production.yaml
+
+
+  langchain:
+    container_name: langchain
+    build:
+      context: .
+      dockerfile: Dockerfile.langchain
+    image: 'plog/langchain:0.1'
+    restart: unless-stopped
+    volumes:
+      - .:/app:rw
+    command: "tail -f /dev/null"
+    environment:
+      GROQ_API_URL: ${GROQ_API_URL}
+      GROQ_API_KEY: ${GROQ_API_KEY}
+      OLLAMA_SERVER: ${OLLAMA_SERVER}
+      CCAT_API_KEY_WS: ${CCAT_API_KEY_WS}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      LANGSMITH_API_KEY: ${LANGSMITH_API_KEY}
+    networks:
+      - default
+    ports:
+      - 8888:8888
+
+configs:
+  qdrant_config:
+    content: |
+      log_level: INFO 
