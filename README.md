@@ -32,9 +32,12 @@ By the end of this tutorial, you’ll have the confidence and knowledge to creat
 # Install 
 
 To be independant and be able to practice anywhere, I'm using two Docker containers:
-1) One for [**Ollama**](https://ollama.com/search)with a couple of models
+1) One for [**Ollama**](https://ollama.com/search) with a couple of models
 2) **A development container** with Python 3.12 and the libraries I need
-4) Using VSCode you [**"Attach Visual Studio Code"**](https://code.visualstudio.com/docs/devcontainers/containers) with Jupyter plugins 
+
+Then, using VSCode, you can [**"Attach Visual Studio Code"**](https://code.visualstudio.com/docs/devcontainers/containers) and run all examples with Jupyter plugins 
+
+<p align="center"><img src="docs/vscode.gif" width="400"></p>
 
 ... and you're the king of the world
 

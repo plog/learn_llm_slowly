@@ -10,4 +10,6 @@ langchain-ollama
 langchain-openai
 langchain-community 
 langchain-qdrant
+jupyterlab
 pypdf
+
