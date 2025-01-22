@@ -3,13 +3,17 @@
 Welcome to the LangChain LLM tutorial! This guide is designed to help you learn LangChain step by step, at a slow and deliberate pace. Rushing often leads to mistakes, and we want to ensure you have a solid understanding at every stage.
 
 # About This Tutorial
-LangChain is a powerful framework for building applications using large language models (LLMs). However, due to its complexity, it’s easy to become overwhelmed if you try to move too quickly. This tutorial is intentionally structured to:
+LangChain is a powerful framework for building applications using large language models (LLMs). 
+However, due to its complexity, it’s easy to become overwhelmed if you try to move too quickly. 
+This tutorial is intentionally structured to:
 
 - Emphasize gradual learning.
 - Break down complex topics into manageable steps.
 - Provide clear examples and exercises.
 
-By the end of this tutorial, you’ll have the confidence and knowledge to create robust LangChain-based applications.
+**We will use LangChain only, no LangGraph nor LangSmith** 
+
+*(...at the time of writing this I don't even know what they do 😂)*
 
 ---
 
@@ -30,8 +34,11 @@ By the end of this tutorial, you’ll have the confidence and knowledge to creat
 5. Tools calling<br>
 [05.tool_calling.ipynb](05.tool_calling.ipynb): Tool calling, also known as function calling, enables AI models to interact with systems like APIs or databases by responding in a schema-specific format
 
-6. Memory<br>
-[06.memory.ipynb](06.memory.ipynb):The code creates a chatbot with short-term memory using ChatOllam.
+6. Short-Term Memory<br>
+[06.short_memory.ipynb](06.short_memory.ipynb):The code creates a chatbot with short-term memory using ChatOllam.
+
+7. Long-Term Memory<br>
+[07.long_memory.ipynb](07.long_memory.ipynb)This code builds a chatbot that remembers and retrieves past conversations using a database, allowing it to provide personalized and context-aware responses.
 ---
 
 # How to Install and run the Notebooks on your Docker
