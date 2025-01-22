@@ -43,7 +43,8 @@ This tutorial is intentionally structured to:
 8. Runnable<br>
 [08.runnable.ipynb](08.runnable.ipynb): This code demonstrates the Runnable concept by building a pipeline of chained transformations—adding context, generating a response with a language model, and post-processing the output—showcasing how LangChain organizes and executes workflows efficiently.
 
-
+9. Agent<br>
+[09.agent.ipynb](09.agent.ipynb): An agent dynamically selects tools and actions based on input, offering flexibility, efficiency, and scalability, while a pipeline processes inputs linearly through predefined steps without decision-making.
 ---
 
 # How to Install and run the Notebooks on your Docker
