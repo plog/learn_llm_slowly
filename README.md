@@ -85,10 +85,6 @@ Then, using VSCode, you can [**"Attach Visual Studio Code"**](https://code.visua
 
 A simple `docker-compose up -d` should do the trick
 
-# Run the Notebooks
-This tutorial includes a series of Jupyter Notebooks you can run 
-
-
 ---
 
 ## Tips for Success
