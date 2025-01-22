@@ -31,11 +31,25 @@ By the end of this tutorial, you’ll have the confidence and knowledge to creat
 [05.tool_calling.ipynb](05.tool_calling.ipynb): Tool calling, also known as function calling, enables AI models to interact with systems like APIs or databases by responding in a schema-specific format
 ---
 
-# Install 
+# How to Install and run the Notebooks on your Docker
+
+## Docker
 
 To be fully independant and be able to practice anywhere, I'm using two small Docker containers:
-1) One for [**Ollama**](https://ollama.com/search) with a couple of models
+1) One for [**Ollama**](https://ollama.com/search) with a couple of models (llama,)
 2) One as my **development container** with Python 3.12 and the LangChain libraries I need
+
+## Ollama
+The models I use:
+```
+NAME                        ID              SIZE      MODIFIED    
+phi3:14b                    cf611a26b048    7.9 GB    2 days ago     
+mxbai-embed-large:latest    468836162de7    669 MB    5 days ago     
+mistral:latest              f974a74358d6    4.1 GB    9 days ago     
+llama3.2:latest             a80c4f17acd5    2.0 GB    11 days ago  
+```
+
+## VSCode
 
 Then, using VSCode, you can [**"Attach Visual Studio Code"**](https://code.visualstudio.com/docs/devcontainers/containers) and run all examples with Jupyter plugins 
 
@@ -43,12 +57,13 @@ Then, using VSCode, you can [**"Attach Visual Studio Code"**](https://code.visua
 
 ... and you're the king of the world
 
+## Notes
 - We'll use Ollama to avoid expenses associated with LLM like GPT. No need API keys nor Credit Card. 
 - Results may be a bit less accurate than GPT but we wanna learn first.
 - The version of LangChain installed should be 0.3+ (important)
 - Ollama [is easy to install using Docker](https://github.com/ollama/ollama/blob/main/docs/docker.md). 
 (Better to have a GPU, even a small one)
-- I give an example of Dockerfile and docker-compose.yaml using Python 3.12
+- I give an example of Dockerfile and docker-compose.yaml using Python 3.12 (I have to test this...)
 - You can then use an evironment variable OLLAMA_SERVER (ex. OLLAMA_SERVER='http://ollama:11434') from this container [running Jupyter](https://jupyterlab.readthedocs.io/en/4.1.x/getting_started/installation.html)
 - Required Python packages from `requirements.txt` file should be build with the Dockerfile.
 
