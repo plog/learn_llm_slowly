@@ -12,4 +12,4 @@ langchain-community
 langchain-qdrant
 jupyterlab
 pypdf
-
+colorama

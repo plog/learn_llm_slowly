@@ -29,6 +29,9 @@ By the end of this tutorial, you’ll have the confidence and knowledge to creat
 
 5. Tools calling<br>
 [05.tool_calling.ipynb](05.tool_calling.ipynb): Tool calling, also known as function calling, enables AI models to interact with systems like APIs or databases by responding in a schema-specific format
+
+6. Memory<br>
+[06.memory.ipynb](06.memory.ipynb):The code creates a chatbot with short-term memory using ChatOllam.
 ---
 
 # How to Install and run the Notebooks on your Docker
