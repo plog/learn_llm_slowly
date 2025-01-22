@@ -35,10 +35,15 @@ This tutorial is intentionally structured to:
 [05.tool_calling.ipynb](05.tool_calling.ipynb): Tool calling, also known as function calling, enables AI models to interact with systems like APIs or databases by responding in a schema-specific format
 
 6. Short-Term Memory<br>
-[06.short_memory.ipynb](06.short_memory.ipynb):The code creates a chatbot with short-term memory using ChatOllam.
+[06.short_memory.ipynb](06.short_memory.ipynb): The code creates a chatbot with short-term memory using ChatOllam.
 
 7. Long-Term Memory<br>
-[07.long_memory.ipynb](07.long_memory.ipynb)This code builds a chatbot that remembers and retrieves past conversations using a database, allowing it to provide personalized and context-aware responses.
+[07.long_memory.ipynb](07.long_memory.ipynb): This code builds a chatbot that remembers and retrieves past conversations using a database, allowing it to provide personalized and context-aware responses.
+
+8. Runnable<br>
+[08.runnable.ipynb](08.runnable.ipynb): This code demonstrates the Runnable concept by building a pipeline of chained transformations—adding context, generating a response with a language model, and post-processing the output—showcasing how LangChain organizes and executes workflows efficiently.
+
+
 ---
 
 # How to Install and run the Notebooks on your Docker
